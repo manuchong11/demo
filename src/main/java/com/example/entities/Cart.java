@@ -16,25 +16,36 @@ import lombok.Setter;
 
 
 @Entity
-@Table(name = "countries")
+@Table(name = "carts")
 @Getter
 @Setter
 public class Cart {
 
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    @Column(name = "Country_ID")
+    @Column(name = "cart_id")
     private Long countryId;
     
-    @Column(name = "Country")
+    @Column(name = "package_price")
     private String country;
 
-    @Column(name = "Create_date")
+    @Column(name = "party_size")
     @CreationTimestamp
     private Date createDate;
 
-    @Column(name = "Last_Update")
+    @Column(name = "status")
     @UpdateTimestamp
     private Date lastUpdate;
 
+    @Column(name = "order_tracking_number")
+    private;
+
+    @Column(name = "create_date")
+    private;
+
+    @Column(name = "last_update")
+    private;
+
+    @Column(name = "customer_id")
+    private;
 }
