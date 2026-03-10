@@ -6,6 +6,8 @@ import java.util.Set;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 public class CartItem {
     @Id
@@ -16,6 +18,8 @@ public class CartItem {
 
     private Set<Excursion> excursions = new HashSet<>();
 
+    @ManyToOne
+    @JoinColumn(name = "cart_id")
     private Cart cart;
 
     private Date createDate;
