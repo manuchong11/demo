@@ -40,7 +40,7 @@ public class Country {
     @UpdateTimestamp
     private Date lastUpdate;
 
-    @OneToMany(mappedBy = "countryId", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "country", cascade = CascadeType.ALL)
     private Set<Division> divisions;
 
 
