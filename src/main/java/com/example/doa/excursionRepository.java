@@ -1,5 +1,9 @@
 package com.example.doa;
 
-public interface excursionRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.example.entities.Excursion;
+
+public interface excursionRepository extends JpaRepository<Excursion, Long> {
 
 }

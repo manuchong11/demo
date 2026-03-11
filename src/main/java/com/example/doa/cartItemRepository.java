@@ -1,5 +1,9 @@
 package com.example.doa;
 
-public interface cartItemRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.example.entities.CartItem;
+
+public interface cartItemRepository extends JpaRepository<CartItem, Long> {
 
 }
