@@ -1,9 +1,11 @@
 package com.example.doa;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import com.example.entities.Country;
 
+@CrossOrigin("http://localhost:4200")
 public interface countryRepository extends JpaRepository<Country, Long> {
 
 }
