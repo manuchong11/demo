@@ -3,6 +3,11 @@ package com.example.entities;
 import java.util.HashSet;
 import java.util.Set;
 
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 
 public class Vacation {
@@ -33,7 +38,7 @@ public class Vacation {
     @OneToMany(mappedBy = "vacation", cascade = CascadeType.ALL)
     private Set<CartItem> cartItems = new HashSet<>();
 
-
+    @OneToMany(mappedBy = "vacation", cascade = CascadeType.ALL)
     private Set<Excursion> excursions = new HashSet<>();
 
 }

@@ -7,6 +7,8 @@ import jakarta.persistence.Column;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 public class Excursion {
     
@@ -30,6 +32,8 @@ public class Excursion {
     @Column(name = "last_update")
     private Date;
 
+    @ManyToOne
+    @JoinColumn(name = "vacation_id")
     private Vacation vacation;
 
     private Set<CartItem> cartItems = new HashSet<>();
