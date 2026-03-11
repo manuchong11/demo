@@ -3,6 +3,8 @@ package com.example.entities;
 import java.util.HashSet;
 import java.util.Set;
 
+import jakarta.persistence.OneToMany;
+
 public class Vacation {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -26,8 +28,11 @@ public class Vacation {
     private Date;
 
     @Column(name = "last_update")
-    @Deprecated
     private Date;
+
+    @OneToMany(mappedBy = "vacation", cascade = CascadeType.ALL)
+    private Set<CartItem> cartItems = new HashSet<>();
+
 
     private Set<Excursion> excursions = new HashSet<>();
 

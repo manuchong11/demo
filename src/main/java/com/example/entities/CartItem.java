@@ -14,6 +14,8 @@ public class CartItem {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
 
+    @ManyToOne
+    @JoinColumn(name = "vacation_id")
     private Vacation vacation;
 
     private Set<Excursion> excursions = new HashSet<>();
