@@ -6,6 +6,6 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import com.example.entities.Cart;
 
 @CrossOrigin("http://localhost:4200")
-public interface cartRepository extends JpaRepository<Cart, Long> {
+public interface CartRepository extends JpaRepository<Cart, Long> {
 
 }

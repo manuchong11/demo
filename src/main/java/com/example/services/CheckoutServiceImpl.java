@@ -4,7 +4,11 @@ import java.util.Set;
 
 import org.springframework.stereotype.Service;
 
+import com.example.doa.CartItemRepository;
+import com.example.doa.CartRepository;
+import com.example.doa.CustomerRepository;
 import com.example.entities.Cart;
+import com.example.entities.CartItem;
 
 import static jakarta.persistence.GenerationType.UUID;
 import jakarta.transaction.Transactional;

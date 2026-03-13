@@ -6,6 +6,6 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import com.example.entities.Customer;
 
 @CrossOrigin("http://localhost:4200")
-public interface customerRepository extends JpaRepository<Customer, Long> {
+public interface CustomerRepository extends JpaRepository<Customer, Long> {
 
 }
